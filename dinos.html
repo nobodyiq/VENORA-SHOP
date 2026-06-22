@@ -27,7 +27,24 @@
         <h3>جيجا نوتو (Giganotosaurus) لفل 600</h3>
         
         <!-- هذا هو الرابط المباشر الصحيح والمستقر بنسبة 100% لصورتك الحقيقية -->
-        <img src="https://imgbox.com" alt="Giga Lvl 600">
+        <img src="
+from PIL import Image
+import os
+
+# Load the uploaded image
+input_path = "/mnt/agents/upload/WhatsApp Image 2026-06-23 at 1.42.46 AM.jpeg"
+output_path = "/mnt/agents/output/Mammoth_ARK.jpg"
+
+# Open and save as JPG
+img = Image.open(input_path)
+# Convert to RGB if necessary (in case it has alpha channel or other modes)
+if img.mode != 'RGB':
+    img = img.convert('RGB')
+img.save(output_path, 'JPEG', quality=95)
+
+print(f"Saved to: {output_path}")
+print(f"File size: {os.path.getsize(output_path) / 1024:.2f} KB")
+" alt="Giga Lvl 600">
 
         <div class="stats">
             <strong>📊 مواصفات الديناصور:</strong><br>
